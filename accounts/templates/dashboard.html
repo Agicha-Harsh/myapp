@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Progressee Edutech</title>
+    <style type="text/css">
+    	body{
+    		margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #7abecc !important;
+    	}
+    	.content{
+    		background: white;
+    		width: 50%;
+    		padding: 40px;
+    		margin: 100px auto;
+
+    	}
+    </style>
+</head>
+<body>
+	<div class="content">
+    {% block content %}    
+        <h1 style="text-align: center;">Welcome to Progressee - Management Edutech Platform</h1>
+        {% if user.is_authenticated %}
+        <p>
+        Progressee - Management Edutech Platform<br>
+initiatives are run by IIM Alumnus, Corporate Professional and Startup Evangelist.<br><br>
+As a platform we help individuals to master the skills, prepare and connect them to industry work opportunities.<br><br>
+
+
+
+We do this by providing following online live management education programs:<br>
+
+1.     Two Months Internship Programs for 1] Sales/BDE and 2] TA & HR Ops<br>
+
+2.    Management Bootcamp Programs<br>
+
+3.    Industry Knowledge Oriented Management Certification Programs<br>
+        </p>
+        <table align="center">
+        			<tr style="text-align: center;">
+        				<td>
+        					<a href="{% url 'logout' %}">Logout</a>
+        				</td>
+        			</tr>
+        		</table>
+        
+        {% endif %}
+    {% endblock %}
+    </div>
+</body>
+</html>
