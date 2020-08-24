@@ -1,2 +1,2 @@
 # myapp
-simple django app 
+simple django app demo
